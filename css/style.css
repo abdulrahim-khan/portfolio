@@ -1,8 +1,8 @@
  @import 'utilities.css'; /* imoprting utilities file in css file */
 :root
 {
---primary:#07ddff;
-/* --primary:#3DCFD3; */
+--primary:#117766;
+ /* --primary:#8b0404; */
 --dark:#161616;
 --pure:#ffffff;
 --ternary:#898989;
@@ -188,7 +188,7 @@ section.about .social a img{
     padding:0.5rem ;
 
 }
-.section-heading{
+/* .section-heading{
  color:var(--secondary);
  text-align: center;
  margin-bottom: 1rem;
@@ -202,6 +202,100 @@ color:var(--ternary);
 font-family: 'Lato' ,sans-serif;
 margin-bottom: 8rem;
 text-align: center;
+} */
+section.skill-section {
+    background: var(--dark);
+    padding-bottom:5rem;
+}
+.section-heading{
+    color:var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 5rem;
+}
+section.skill-section h1{
+    margin-bottom: 30px;
+}
+section.skill-section .skill{
+    margin-bottom: 35px;
+    position: relative;
+    overflow-x: hidden;
+
+}
+section.skill-section .skill::before{
+    content: "";
+    width: 100%;
+    height: 10px;
+    display: block;
+    position: absolute;
+    background-color:#959595 ;
+    bottom: 0;
+    border-radius: 10px;
+}
+section.skill-section .skill .skill-bar:hover::before{
+    height: 100%;
+}
+section.skill-section .skill p{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--pure);
+    margin-bottom: 0;
+}
+
+section.skill-section .skill .skill-bar{
+    width: 100%;
+    height: 10px;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    animation: animated ls both;
+}
+section.skill-section .skill .skill-bar.skill1{
+    background-image: radial-gradient( circle 759px at -6.7% 50%,  rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
+    width: 50%;
+}
+section.skill-section .skill .skill-bar.skill2{
+    background-image: linear-gradient( 68.2deg,  rgba(255,202,88,1) 0%, rgba(139,73,255,1) 100.2% ); 
+    width: 60%;
+}
+section.skill-section .skill .skill-bar.skill3{
+    background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );  
+    width: 70%;
+}
+section.skill-section .skill .skill-bar.skill4{
+    background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+    width: 80%;}
+
+section.skill-section .skill .skill-bar.skill5{
+    background-image: linear-gradient( 110.1deg,  rgba(34,126,34,1) 2.9%, rgba(168,251,60,1) 90.3% ); 
+    width: 90%;
+}
+section.skill-section .skill .skill-bar span{
+    position: absolute;
+    border-top:5px solid #f4392f;
+    top: -30px;
+    padding: 3px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+section.skill-section .skill .skill-bar.skill1 span.skill-count,
+section.skill-section .skill .skill-bar.skill2 span.skill-count,
+section.skill-section .skill .skill-bar.skill3 span.skill-count,
+section.skill-section .skill .skill-bar.skill4 span.skill-count,
+section.skill-section .skill .skill-bar.skill5 span.skill-count
+{
+right: 0;
+color: var(--pure);
+}
+
+@keyframes animated{
+    from{
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    to{
+        transform: matrix3d(0, 0, 0);
+    }
 }
 section.services
 {
