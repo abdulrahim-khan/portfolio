@@ -140,7 +140,8 @@ section{
 } */
 section.about .about-me-img{
     height: 450px;
-    transform: scaleX(-1)
+    overflow : hidden;
+    transform: scaleX(-1);
 }
 section.about h1{
     margin-bottom: 1rem;
